@@ -1,0 +1,31 @@
+{
+  "id": "./",
+  "name": "Ballon d'Or 2026",
+  "short_name": "Ballon d’Or",
+  "description": "Fusionne les favoris, fais le meilleur score jusqu’au 25 octobre et pars au Ballon d’Or avec ton +1 : Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie du 26 octobre au London Palladium. Jeu gratuit par Le Bonbon.",
+  "lang": "fr",
+  "start_url": "./?s=home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B1A12",
+  "theme_color": "#0B1A12",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

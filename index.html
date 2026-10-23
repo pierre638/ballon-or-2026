@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <title>Ballon d’Or 2026 : pars à la cérémonie avec ton +1</title>
+  <!-- The APP_NAME, BG, FG, LOGO and TAGLINE tokens (double underscores) are filled from public/theme/theme.json by vite.theme-html.ts (dev and build). -->
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0B1A12; }
+    body {
+      position: fixed; inset: 0; touch-action: none; overscroll-behavior: none;
+      -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #game { position: fixed; inset: 0; }
+    #game canvas { display: block; touch-action: none; }
+    noscript { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font: 600 20px system-ui, -apple-system, sans-serif; }
+    /* Splash HTML : visible des le premier paint, retire par Preload quand le jeu est pret (window.__gameReady). */
+    #splash { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #0B1A12; color: #FFFFFF; font: 600 22px system-ui, -apple-system, sans-serif; z-index: 5; transition: opacity .25s; text-align: center; padding: 0 24px; box-sizing: border-box; }
+    #splash img { width: 120px; height: 120px; animation: lbgs-pulse 1.4s ease-in-out infinite; }
+    @keyframes lbgs-pulse { 50% { transform: scale(1.06); } }
+    #splash p { margin: 0; }
+    #splash .bar { position: relative; width: 200px; height: 6px; border-radius: 3px; overflow: hidden; }
+    #splash .bar::before { content: ''; position: absolute; inset: 0; background: currentColor; opacity: .18; }
+    #splash .bar i { position: relative; display: block; height: 100%; width: 0; background: currentColor; transition: width .2s; }
+    #splash .s { font-size: 14px; opacity: .7; }
+    #splash.out { opacity: 0; pointer-events: none; }
+    #splash button { margin-top: 8px; padding: 14px 28px; border: 0; border-radius: 999px; font: 600 18px inherit; background: #FFFFFF; color: #0B1A12; }
+    @media (prefers-reduced-motion: reduce) { #splash img, #rotate svg { animation: none; } }
+    /* Paysage sur telephone : le terrain serait illisible, on demande de tourner l'appareil (CSS pur, aucun code). */
+    #rotate { display: none; position: fixed; inset: 0; z-index: 6; background: #0B1A12; color: #FFFFFF; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; font: 600 20px/1.3 system-ui, -apple-system, sans-serif; }
+    #rotate p { margin: 0; }
+    #rotate svg { animation: lbgs-rot 1.6s ease-in-out infinite alternate; }
+    @keyframes lbgs-rot { to { transform: rotate(-90deg); } }
+    @media (orientation: landscape) and (max-height: 600px) { #rotate { display: flex; } }
+  </style>
+  <script>
+    // Garde-fou de boot : un ecran noir muet est la panne la plus couteuse d'une campagne.
+    // Tant que window.__gameReady n'est pas pose par Preload, toute erreur non rattrapee (ou 20 s sans progression)
+    // remplace le splash par un message et un bouton Reessayer. Le script est inline pour tourner meme si le module echoue.
+    window.__bootFail = function (m) {
+      var s = document.getElementById('splash');
+      if (!s || s.dataset.failed) return;
+      s.dataset.failed = '1';
+      s.dataset.reason = String(m || '').slice(0, 120);
+      s.classList.remove('out');
+      s.innerHTML = '<p class="t">Oups, le jeu n\'a pas réussi à se lancer.</p><p class="s">Vérifie ta connexion puis réessaie.</p><button type="button" onclick="location.reload()">Réessayer</button>';
+    };
+    addEventListener('error', function (e) { if (!window.__gameReady) window.__bootFail(String(e.message)); });
+    addEventListener('unhandledrejection', function (e) { if (!window.__gameReady) window.__bootFail(String(e.reason)); });
+    (function () {
+      var last = '';
+      function tick() {
+        if (window.__gameReady) return;
+        var b = document.querySelector('#splash .bar i');
+        var w = b ? b.style.width : '';
+        if (w && w !== last) { last = w; setTimeout(tick, 20000); return; } // la barre avance encore : on laisse charger
+        window.__bootFail('timeout');
+      }
+      setTimeout(tick, 20000);
+    })();
+  </script>
+  <meta name="theme-color" content="#0B1A12">
+  <meta name="apple-mobile-web-app-title" content="Ballon d’Or">
+  <meta name="description" content="Fusionne les favoris, fais le meilleur score jusqu’au 25 octobre et pars au Ballon d’Or avec ton +1 : Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie du 26 octobre au London Palladium. Jeu gratuit par Le Bonbon.">
+  <link rel="preload" href="./theme/theme.json" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="./theme/bg.png" as="image">
+  <link rel="preload" href="./theme/fonts/display.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Ballon d&#39;Or 2026">
+  <meta property="og:title" content="Ballon d’Or 2026 : pars à la cérémonie avec ton +1">
+  <meta property="og:description" content="Fusionne les favoris, fais le meilleur score jusqu’au 25 octobre et pars au Ballon d’Or avec ton +1 : Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie du 26 octobre au London Palladium. Jeu gratuit par Le Bonbon.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ballon d’Or 2026 : pars à la cérémonie avec ton +1">
+  <meta name="twitter:description" content="Fusionne les favoris, fais le meilleur score jusqu’au 25 octobre et pars au Ballon d’Or avec ton +1 : Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie du 26 octobre au London Palladium. Jeu gratuit par Le Bonbon.">
+  <meta property="og:url" content="https://pierre638.github.io/ballon-or-2026/">
+  <meta property="og:image" content="https://pierre638.github.io/ballon-or-2026/share/og-4243e807.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ballon d’Or 2026 : pars à la cérémonie avec ton +1">
+  <meta name="twitter:image" content="https://pierre638.github.io/ballon-or-2026/share/og-4243e807.jpg">
+  <script type="module" crossorigin src="./assets/index-Bd0Qv0Q2.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/phaser-BUlrDfUd.js">
+</head>
+<body>
+  <noscript>Active JavaScript pour jouer.</noscript>
+  <div id="splash" aria-live="polite">
+    <img src="./theme/logo.svg" alt="" width="120" height="120" decoding="async" />
+    <p class="t">Ballon d'Or 2026</p>
+    <div class="bar"><i></i></div>
+    <p class="s">Chargement…</p>
+  </div>
+  <div id="rotate" aria-hidden="true">
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2" /><circle cx="12" cy="18.5" r=".8" fill="currentColor" /></svg>
+    <p>Tourne ton téléphone<br />pour jouer</p>
+  </div>
+  <div id="game" role="application" aria-label="Ballon d'Or 2026"></div>
+</body>
+</html>

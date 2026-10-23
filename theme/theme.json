@@ -1,0 +1,620 @@
+{
+  "$schema": "../../../../themes/_schema/theme.schema.json",
+  "id": "ballon-or-2027",
+  "version": "2.6.0",
+  "brand": {
+    "name": "Ballon d'Or 2026",
+    "slug": "ballon-or-2027",
+    "campaign": "Ballon d'Or 2026",
+    "storeTitle": "Ballon d'Or Merge"
+  },
+  "palette": {
+    "bg": "#0B1A12",
+    "container": "#2E7D46",
+    "containerStroke": "#E8B923",
+    "accent": "#8A6200",
+    "secondary": "#FFD866",
+    "text": "#FFFFFF",
+    "danger": "#E53935",
+    "surface": "#FFFFFF",
+    "onSurface": "#141B2D",
+    "primary": "#E8B923",
+    "onPrimary": "#141B2D"
+  },
+  "font": {
+    "family": "Fredoka",
+    "weight": "600",
+    "titleFamily": "Bangers",
+    "titleWeight": "400"
+  },
+  "layout": {
+    "designWidth": 1080,
+    "designHeight": 1920,
+    "containerWidth": 980,
+    "floorY": 1760,
+    "dropY": 300,
+    "dangerLineY": 540,
+    "nextPreviewScale": 0.4,
+    "containerAlpha": 0.75,
+    "containerStripes": true,
+    "itemArtScale": 1.1,
+    "stage": "flex"
+  },
+  "physics": {
+    "gravity": 1.35,
+    "restitution": 0.28,
+    "friction": 0.04,
+    "frictionAir": 0.012,
+    "density": 0.0012,
+    "sleepThreshold": 60
+  },
+  "rules": {
+    "dropPool": [
+      24,
+      24,
+      22,
+      16,
+      14
+    ],
+    "dropCooldownMs": 340,
+    "youngMs": 700,
+    "restSpeed": 0.3,
+    "graceMs": 1400,
+    "comboWindowMs": 1000,
+    "comboStep": 0.5,
+    "topTierBonus": 1000,
+    "bigTierFrom": 9,
+    "bigTierBonus": 300,
+    "gameOverDelayMs": 650,
+    "finalMerge": "vanish",
+    "dailySeed": false
+  },
+  "tiers": [
+    {
+      "name": "raphinha",
+      "label": "Raphinha",
+      "radius": 82,
+      "points": 10
+    },
+    {
+      "name": "vitinha",
+      "label": "Vitinha",
+      "radius": 90,
+      "points": 30
+    },
+    {
+      "name": "bellingham",
+      "label": "Bellingham",
+      "radius": 99,
+      "points": 60
+    },
+    {
+      "name": "haaland",
+      "label": "Haaland",
+      "radius": 109,
+      "points": 100
+    },
+    {
+      "name": "olise",
+      "label": "Olise",
+      "radius": 120,
+      "points": 150
+    },
+    {
+      "name": "dembele",
+      "label": "Dembélé",
+      "radius": 132,
+      "points": 210
+    },
+    {
+      "name": "kvaratskhelia",
+      "label": "Kvaratskhelia",
+      "radius": 145,
+      "points": 280
+    },
+    {
+      "name": "mbappe",
+      "label": "Mbappé",
+      "radius": 160,
+      "points": 360
+    },
+    {
+      "name": "yamal",
+      "label": "Yamal",
+      "radius": 176,
+      "points": 450
+    },
+    {
+      "name": "kane",
+      "label": "Kane",
+      "radius": 194,
+      "points": 550
+    },
+    {
+      "name": "trophy",
+      "label": "Ballon d’Or",
+      "radius": 213,
+      "points": 660,
+      "isFinal": true
+    }
+  ],
+  "haptics": {
+    "drop": "Light",
+    "merge": "Medium",
+    "top": "Heavy"
+  },
+  "audio": {
+    "pitchStep": 1.035,
+    "volume": {
+      "merge-top": 1,
+      "crowd": 0.9,
+      "drop": 0.6,
+      "whistle": 0.5,
+      "gameover": 0.8
+    }
+  },
+  "strings": {
+    "fr": {
+      "title": "Ballon d’Or 2026",
+      "pageTitle": "Ballon d’Or 2026 : pars à la cérémonie avec ton +1",
+      "tagline": "",
+      "shareDescription": "Fusionne les favoris, fais le meilleur score jusqu’au 25 octobre et pars au Ballon d’Or avec ton +1 : Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie du 26 octobre au London Palladium. Jeu gratuit par Le Bonbon.",
+      "play": "Jouer",
+      "tutorial": "Glisse pour viser, relâche pour lâcher",
+      "tutorialMerge": "Deux {a} = un {b} ! Monte jusqu’au Ballon d’Or.",
+      "ladderHint": "Touche ? pour voir les joueurs",
+      "ladderTitle": "Les favoris du Ballon d’Or",
+      "ladderClose": "Compris",
+      "newTier": "Nouveau : {name} !",
+      "dangerHint": "Trop haut !",
+      "comboBig": "Enchaînement x{n} !",
+      "comboHuge": "Le stade s’enflamme ! x{n}",
+      "topTier": "BALLON D’OR !",
+      "replay": "Rejouer",
+      "share": "Partager",
+      "newBest": "Nouveau record !",
+      "next": "Suivant",
+      "score": "Score",
+      "best": "Record",
+      "bestScoreNamed": "{name}, ton record : {score}. Bats-le !",
+      "countdownDays": "Plus que {days} jours pour partir à Londres avec ton +1",
+      "countdownLastDay": "Dernier jour pour jouer !",
+      "countdownOver": "Concours terminé",
+      "gameOver": "Coup de sifflet final !",
+      "prizeBanner": "En jeu : Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie",
+      "save": "Je valide mon score",
+      "leaderboardJoin": "Inscris-toi : le meilleur score part au Ballon d’Or à deux",
+      "leaderboardLocalTitle": "Tes parties sur ce téléphone",
+      "leadTitle": "Entre dans la course",
+      "leadIntro": "Le meilleur score au 25 octobre, 23 h 59, remporte le lot ci-dessus. Une seule inscription : tes prochains records comptent automatiquement.",
+      "consentNewsletter": "J’accepte de recevoir les actualités du Bonbon par email (facultatif)",
+      "rewardTitle": "Tu es dans la course !",
+      "rewardIntro": "C’est noté ! Ton meilleur score part tout seul : rejoue pour viser Londres avec ton +1. Réponse par email le 26 octobre au matin.",
+      "continue": "Partager le défi",
+      "cta": "Voir le règlement",
+      "shareText": "⚽️ {score} pts au jeu Ballon d’Or 2026 ! Le meilleur score gagne Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie, avec son +1. Tu fais mieux ? 🏆",
+      "shareTextRank": "⚽️ {score} pts, je suis {rank} au jeu Ballon d’Or 2026 ! Viens me détrôner : le meilleur score gagne Eurostar, hôtel 4 étoiles, dîner et 2 places pour la cérémonie, avec son +1 🏆",
+      "scoreSending": "Envoi de ton score…",
+      "errPseudo": "Choisis un autre prénom pour le classement.",
+      "leaderboardJoinRank": "Valide ton score : tu entres {rank} au classement",
+      "leaderboardJoinFirst": "Valide ton score et prends la tête du classement",
+      "leaderboardJoinBest": "Ton record de {best} pts compte aussi",
+      "leaderboardThisGame": "Cette partie : {score} pts",
+      "rewardBoardTitle": "Te voilà au classement !",
+      "rewardBoardPending": "Ton score arrive au classement dans quelques instants",
+      "liveTitle": "Classement en direct",
+      "liveFinal": "Classement final",
+      "liveToBeat": "Score à battre : {score} · {name}",
+      "liveYouLead": "Tu es en tête : {score} pts",
+      "liveFinalLeader": "Classement final : {name} {score}",
+      "liveLeader": "En tête : {name}, {score} pts",
+      "livePlayers": "{n} joueurs dans la course",
+      "livePlayersOne": "1 joueur dans la course"
+    }
+  },
+  "campaign": {
+    "start": "2026-10-17",
+    "end": "2026-10-25T23:59:00+01:00",
+    "rulesUrl": "https://pierre638.github.io/ballon-or-2026/reglement.html",
+    "privacyUrl": "https://pierre638.github.io/ballon-or-2026/confidentialite.html",
+    "ctaUrl": "https://pierre638.github.io/ballon-or-2026/reglement.html",
+    "shareUrl": "https://pierre638.github.io/ballon-or-2026/",
+    "primaryAction": "save",
+    "ctaStyle": "secondary",
+    "install": {
+      "enabled": true,
+      "text": "Pour retenter ta chance de partir au Ballon d’Or avec ton +1 : Partager → Sur l’écran d’accueil"
+    },
+    "prize": {
+      "kicker": "À gagner",
+      "title": "Pars au Ballon d’Or avec ton +1",
+      "short": "Eurostar, hôtel 4 étoiles, dîner et 2 places au Ballon d’Or, avec ton +1",
+      "items": [
+        {
+          "title": "2 places pour la cérémonie",
+          "text": "Lundi 26 octobre 2026, au London Palladium"
+        },
+        {
+          "title": "Le voyage en Eurostar",
+          "text": "Direction Londres, pour toi et ton +1"
+        },
+        {
+          "title": "Un hôtel 4 étoiles",
+          "text": "Pour toi et ton +1"
+        },
+        {
+          "title": "Un dîner pour deux",
+          "text": "À partager avec ton +1"
+        }
+      ],
+      "rulesHint": "Détail du lot : article 6 du règlement"
+    },
+    "reward": {
+      "type": "none",
+      "value": ""
+    },
+    "lead": {
+      "fields": [
+        "firstName",
+        "email"
+      ],
+      "consents": [
+        "newsletter"
+      ],
+      "adultsOnly": true
+    },
+    "backend": {
+      "adapter": "supabase",
+      "url": "https://widijkmeeerrgielgigb.supabase.co",
+      "key": "sb_publishable__eRIcRMDOTaD7jhmdusohQ_fqcB59Tp"
+    },
+    "leaderboard": {
+      "enabled": true,
+      "size": 10,
+      "teaser": true,
+      "maxScore": 300000
+    },
+    "analytics": {
+      "adapter": "backend",
+      "endpoint": ""
+    }
+  },
+  "title": {
+    "style": "stickers",
+    "floatingTiers": [
+      7,
+      4,
+      6,
+      5
+    ],
+    "titleColor": "secondary",
+    "logoBadge": false,
+    "logo": "corner",
+    "heroHalo": "glow",
+    "stickerScale": 1.65,
+    "taglineStyle": "text"
+  },
+  "taunts": {
+    "fr": {
+      "titleTagline": [
+        "Ici, on chambre. Mais avec amour.",
+        "Pas de jury ici : ton score vote pour toi.",
+        "Le stade est plein. Il ne manque que toi.",
+        "Kane a été patient. Toi, t’as jusqu’au 25.",
+        "Tu joues au city ou tu joues pour Londres ?",
+        "Olise ne dit rien, mais il te juge.",
+        "Niveau district ? Prouve le contraire.",
+        "Record : {best}. Mon petit cousin rigole.",
+        "{name}, {best} pts ? On a vu mieux."
+      ],
+      "tutorialIdle": [
+        "Glisse, lâche. C’est pas un penalty, prends pas trois minutes.",
+        "Deux joueurs pareils fusionnent. Allez, lâche {tier} !",
+        "Le Robot n’hésite jamais. Glisse pour viser, relâche pour lâcher."
+      ],
+      "dropIdle": [
+        "Ça joue la montre ! L’arbitre sort le jaune pour gain de temps.",
+        "{tier} s’échauffe sur la touche depuis une plombe. Fais-le entrer !",
+        "Tu gardes {tier} ? Olise a fini sa partie d’échecs, lui.",
+        "{tier} attend sa passe. Fais pas ton perso, lâche-le.",
+        "Vitinha aurait déjà joué en une touche. Lâche {tier} !",
+        "La VAR vérifie… ah non, c’est toi qui hésites.",
+        "Tu poses ou tu joues ? {tier} commence à prendre racine.",
+        "Le quatrième arbitre s’impatiente, le panneau est déjà levé. Joue !",
+        "Tu poses le ballon, tu prends ton élan… et rien. Le gardien s’endort.",
+        "Dans le virage, on chante « On s’ennuie ». Envoie {tier} !"
+      ],
+      "comboLabel3": [
+        "Petit pont x{n} !",
+        "Olé ! Olé ! x{n}",
+        "Tiki-taka x{n} !",
+        "Ça régale x{n} !"
+      ],
+      "comboLabel5": [
+        "Festival x{n} !",
+        "Masterclass x{n} !",
+        "Golazo x{n} !",
+        "Kvaradona x{n} !"
+      ],
+      "comboCall": [
+        "Petit pont, grand pont, lucarne ! x{n}, le commentateur perd sa voix.",
+        "Mais c’est un récital ! x{n}, le stade entier se lève.",
+        "x{n} ! Même Olise a failli sourire.",
+        "Le speaker hurle « x{n} » au micro. La ola fait le tour du stade.",
+        "x{n} ! Vitinha referme son carnet : le stratège, c’est toi.",
+        "x{n} ! Prends le micro, fais la Bellingham : « Hey Jude ! »"
+      ],
+      "dangerLabel": [
+        "Hors-jeu !",
+        "Ça déborde !",
+        "Carton jaune !",
+        "Repli défensif !"
+      ],
+      "dangerEnter": [
+        "L’arbitre porte le sifflet à la bouche. Fais redescendre {tier} !",
+        "{tier} frôle le hors-jeu. Toi, tu frôles la crise de nerfs.",
+        "{tier} déborde. Raphinha hurle déjà, et pas de joie.",
+        "Mon général croise les bras… et pas pour célébrer.",
+        "Ça sent la remontada… pour l’adversaire. Fusionne !",
+        "Ça monte, ça monte… {tier} va finir dans le grillage."
+      ],
+      "dangerSurvived": [
+        "Sauvé sur la ligne ! Le stade respire. Ton cardio, un peu moins.",
+        "Arrêt réflexe ! Le stade se lève pour toi, pour une fois.",
+        "Haaland avait calculé ta chute. Bug du Robot !",
+        "Ouf, ta défense tient. Raphinha te prête son mégaphone.",
+        "On a eu chaud. Le banc se rassoit."
+      ],
+      "topTierCry": [
+        "BALLON D’OR !",
+        "C’EST LE GOAT !",
+        "MONUMENTAL !"
+      ],
+      "overLow": [
+        "{score} pts. Dembouz joue en chemise de vacances et fait mieux.",
+        "{score} pts. Olise n’a rien dit. Franchement, on le comprend.",
+        "{score} pts. Niveau district, et encore : le district a fait appel.",
+        "{name}, {score} pts… On va dire que c’était l’échauffement.",
+        "{score} pts. Même mon petit cousin fait mieux, et il joue en tongs.",
+        "But contre ton camp ? {score} pts. Le kop te pardonne, rejoue vite.",
+        "{score} pts. Même le juge de touche a couru plus que toi."
+      ],
+      "overMid": [
+        "{score} pts. Frappe enroulée… sur le poteau. Encore un effort !",
+        "{score} pts. Le stade applaudit poliment. On veut la ola, pas la politesse.",
+        "{score} pts. Le commentateur dit « prometteur ». Chez lui, c’est un compliment.",
+        "{score} pts. Correct. Mais correct, ça ne part pas à Londres.",
+        "{name}, {score} pts. T’es dans la discussion, pas encore dans l’Eurostar.",
+        "{score} pts. Le Stratège note : peut mieux faire. Va chercher la suite.",
+        "Au city, on te choisit plus en dernier. Pas encore en premier.",
+        "{name}, {score} pts : le virage commence à apprendre ton nom."
+      ],
+      "overHigh": [
+        "{score} pts ! Le commentateur est debout sur sa chaise.",
+        "{score} pts. Haaland vérifie si t’es pas un robot, toi aussi.",
+        "{score} pts. Les réseaux crient au Ballon d’Or. Le jury prend note.",
+        "{score} pts. Là, Kane commence à s’inquiéter.",
+        "{score} pts. Mon petit cousin veut ton autographe. Moi aussi.",
+        "{score} pts. Le stade réclame un tour d’honneur. Le Palladium prend des notes.",
+        "{score} pts. La VAR confirme : c’est du très, très haut niveau."
+      ],
+      "overBest": [
+        "Record pulvérisé de {gap} pts. Dans le virage, on floque déjà ton nom.",
+        "Nouveau record, +{gap} pts ! Kane a mis des années, toi une partie.",
+        "Record battu de {gap} pts. Le Palladium t’a à l’œil.",
+        "Record battu de {gap} pts. Bellingham te tend le micro. Hey Jude !",
+        "+{gap} pts sur ton record. Le commentateur ressort sa voix des grands soirs."
+      ],
+      "overNearMiss": [
+        "À {gap} pts de ton record. Sur le poteau ! Le stade se tient la tête.",
+        "{gap} pts de plus et c’était record. Raphinha connaît ce sentiment.",
+        "Hors-jeu d’un cheveu : {gap} pts te séparent de ton record.",
+        "Il manquait {gap} pts. Le seum, mais le seum utile : rejoue.",
+        "{gap} pts. Juste {gap} pts. Dernier but gagne : on fait la belle ?",
+        "{name}, à {gap} pts du record. Le Stratège a un plan : encore une."
+      ],
+      "rankUp": [
+        "Remontée fantastique, te voilà {rank} ! Le virage n’en revient pas.",
+        "+{n} au classement, te voilà {rank}. Tu dribbles le tableau comme Kvara.",
+        "Tu grimpes : te voilà {rank}. Mon général surveille ses arrières.",
+        "{rank} au classement ! Les grands du city descendent d’un cran."
+      ],
+      "rankTop": [
+        "Top {n} ! Ta valise commence à y croire.",
+        "Bienvenue dans le top {n}, {name}. Maintenant, on défend jusqu’au 25 !"
+      ],
+      "rankFirst": [
+        "Numéro 1 ! Ballon d’Or provisoire. Défends-le jusqu’au 25.",
+        "Numéro 1. Maintenant, tout le monde te chasse, mon général.",
+        "En tête ! Jusqu’au 25 octobre, ne lâche rien… sauf des joueurs."
+      ],
+      "chaseLine": [
+        "{gap} pts pour passer {rank}. Une lucarne suffit.",
+        "Un petit pont de {gap} pts et tu passes {rank}.",
+        "{rank} en ligne de mire : plus que {gap} pts.",
+        "Encore {gap} pts et tu passes {rank}. Accélère !"
+      ],
+      "leadLine": [
+        "Tu mènes. Garde la balle, pas de Dembouz.",
+        "Tu mènes. Reste dans ton match jusqu’au 25.",
+        "En tête ! Pas de relâchement, la VAR veille."
+      ],
+      "shareTexts": [
+        "{score} pts au jeu {title}, sans VAR ni excuse. Viens me faire un petit pont : le meilleur score gagne Eurostar, hôtel 4 étoiles, dîner et 2 places au Ballon d’Or 🏆",
+        "⚽️ {score} pts au jeu {title}. Le meilleur score part au Ballon d’Or avec son +1 : Eurostar, hôtel 4 étoiles et dîner. Tu fais mieux ? 🏆",
+        "⚽️ {score} pts au jeu {title}. Toi, t’es de district ou tu viens me battre ? Le meilleur score part à Londres avec son +1 🏆",
+        "J’ai fait {score} pts et débloqué {tier}. Toi, t’es plutôt Ballon d’Or ou banc de touche ? ⚽️ Le meilleur score part à Londres avec son +1 🏆"
+      ],
+      "shareTextsRank": [
+        "{rank} au jeu {title} avec {score} pts ⚽️ Le meilleur score gagne Eurostar, hôtel 4 étoiles, dîner et 2 places au Ballon d’Or. Viens me chercher 🏆",
+        "Je suis {rank} au jeu {title} avec {score} pts. Ballon d’Or provisoire, viens me le prendre 😤 Le meilleur score part à Londres avec son +1 🏆",
+        "{rank} avec {score} pts au jeu {title}. Au city, on appelle ça une leçon ⚽️ Viens la prendre : le meilleur score part à Londres avec son +1 🏆",
+        "Je suis {rank} au jeu {title} ({score} pts). Le temps additionnel court jusqu’au 25 octobre : viens me doubler, si tu l’oses 🏆"
+      ],
+      "leadHook": [
+        "{score} pts : le speaker veut ton prénom.",
+        "Ce score mérite le tableau d’affichage.",
+        "Ton +1 compte sur ta signature.",
+        "{score} pts ? Ça mérite mieux que le banc."
+      ],
+      "rewardHook": [
+        "C’est validé par la VAR. Chaque nouveau record part tout seul : rejoue !",
+        "C’est noté. Maintenant, défends ton score comme un capitaine.",
+        "{name}, te voilà titulaire. Coup de sifflet final le 25 octobre à 23 h 59.",
+        "Te voilà {rank}. Envoie le défi au groupe et regarde-les galérer."
+      ],
+      "tiers": {
+        "raphinha": {
+          "nickname": "Le Gueulard"
+        },
+        "vitinha": {
+          "nickname": "Le Stratège"
+        },
+        "bellingham": {
+          "nickname": "King Jude"
+        },
+        "haaland": {
+          "nickname": "Le Robot"
+        },
+        "olise": {
+          "nickname": "Nonchalant"
+        },
+        "dembele": {
+          "nickname": "Dembouz",
+          "intro": [
+            "Le stade chante « Ousmane, Ballon d’Or » !",
+            "Dembouz est là, en chemise de vacances.",
+            "Tête en l’air, pied magique : Dembouz !"
+          ]
+        },
+        "kvaratskhelia": {
+          "nickname": "Kvaradona",
+          "intro": [
+            "Kvaradona s’échauffe sur Live Is Life.",
+            "Crochet, chaloupe, petit pont : Kvaradona !",
+            "Le magicien est là. Tes défenseurs, moins."
+          ]
+        },
+        "mbappe": {
+          "nickname": "Le Général",
+          "intro": [
+            "Mon général est dans la place.",
+            "Il croise les bras. Toi, croise les doigts.",
+            "Le stade se lève : mon général est là."
+          ]
+        },
+        "yamal": {
+          "nickname": "Le Prodige",
+          "intro": [
+            "Le Prodige débarque, cartable sur le dos.",
+            "Frappe enroulée du Prodige. Lucarne !",
+            "Le Prodige arrive. Les grands flippent."
+          ]
+        },
+        "kane": {
+          "nickname": "Hurricane",
+          "intro": [
+            "Kane a enfin un trophée. Et toi ?",
+            "Penalty, but, trophée : Kane coche tout.",
+            "Hurricane est là. Sa vitrine se remplit."
+          ]
+        },
+        "trophy": {
+          "nickname": "Le Graal",
+          "intro": [
+            "Le commentateur pleure en direct. Normal.",
+            "Même le gardien applaudit. Tiens bon."
+          ]
+        }
+      }
+    },
+    "revealFrom": 5,
+    "idleMs": 6000,
+    "gapMs": 4000,
+    "scoreBrackets": [
+      1500,
+      6000
+    ],
+    "nearMiss": {
+      "ratio": 0.1,
+      "min": 100
+    },
+    "bannedWords": [
+      "dictateur",
+      "dictature",
+      "mobutu",
+      "léopard",
+      "nuggets",
+      "mcdo",
+      "minus",
+      "nabot"
+    ]
+  },
+  "placeholder": {
+    "active": false,
+    "style": "kawaii",
+    "seed": 42
+  },
+  "credits": [
+    {
+      "asset": "fonts/display.woff2",
+      "author": "Milena Brandão (Fredoka)",
+      "license": "OFL-1.1",
+      "url": "https://fonts.google.com/specimen/Fredoka"
+    },
+    {
+      "asset": "fonts/title.woff2 (Bangers)",
+      "author": "Vernon Adams (Bangers)",
+      "license": "OFL-1.1",
+      "url": "https://fonts.google.com/specimen/Bangers"
+    },
+    {
+      "asset": "items/tier-1.png a tier-10.png (figurines joueurs)",
+      "author": "Le Bonbon, à partir du pack de dix bustes « anime sombre » (ballon-or-2027-anime-attributs-v2) fourni par Pierre le 2026-10-19",
+      "license": "brand-proprietary",
+      "note": "v7 formes du pack anime-attributs-v2 (2026-10-19) : dix bustes découpés, un attribut par joueur (mégaphone, cartable, échiquier, trophée, uniforme, micro, chemise de vacances, carnet), générés par Imagegen d'après le brief de Pierre, sans médaillon ni fond. Recalés par script sur le cercle physique (masters docs/propositions/joueurs/figures-v2/, 1024, cercle du corps r 440 centré) : taille et position cherchées pour remplir le cercle, bas des épaules arrondi par l'arc du cercle, tête et accessoires libres jusqu'à +10 % du rayon, contour encre de largeur constante à l'écran, puis recadrage au carré central de 968 et réduction à ceil(4 × rayon × 1,1) (layout.itemArtScale 1.1). Le pack ne contient pas de trophée : le palier 11 reste le ballon doré. Mêmes réserves que les versions précédentes (droit à l'image des joueurs, marque Ballon d'Or, attribut « Mobutu » choisi par Pierre)."
+    },
+    {
+      "asset": "items/tier-11.png (figurine trophée)",
+      "author": "Le Bonbon, redessiné à partir du trophée SVG de Le Bonbon (2026-10-16)",
+      "license": "brand-proprietary",
+      "note": "figurine de la même série : ballon doré sans socle, redessiné le 2026-10-18 à partir du trophée SVG de Le Bonbon (2026-10-16) sans médaillon ni fond, contour encre, étalonnage kit v2, même recadrage et même échelle que les joueurs ; évoque le trophée Ballon d'Or (marque France Football / Groupe Amaury), usage non officiel à autoriser avant diffusion"
+    },
+    {
+      "asset": "hero.png",
+      "author": "Le Bonbon, à partir du pack de dix bustes « anime sombre » (ballon-or-2027-anime-attributs-v2) fourni par Pierre le 2026-10-19",
+      "license": "brand-proprietary",
+      "note": "visuel titre 1024 × 1024 transparent : bustes Yamal, Kane et Mbappé du pack anime-attributs-v2 derrière la figurine ballon doré, ombres portées douces, 2026-10-19 ; mêmes réserves (droit à l'image, marque Ballon d'Or)"
+    },
+    {
+      "asset": "logo.svg",
+      "author": "Le Bonbon",
+      "license": "CC0-1.0",
+      "note": "emblème ballon doré sur badge sombre avec arc de laurier, SVG sans texte, 2026-10-16"
+    },
+    {
+      "asset": "bg.svg",
+      "author": "Le Bonbon",
+      "license": "CC0-1.0",
+      "note": "stade nocturne vu de la tribune (ciel, mâts de projecteurs, gradins de points de foule, brume, pelouse à bandes de tonte, lignes blanches, confettis dorés) généré en SVG (seed 2027) et rasterisé avec sharp, 2026-10-16 ; source vectorielle v4, non utilisée en jeu quand bg.png existe"
+    },
+    {
+      "asset": "bg.png (réétalonné v5)",
+      "author": "Le Bonbon",
+      "license": "CC0-1.0",
+      "note": "rendu de bg.svg réétalonné le 2026-10-17 vers l’éclairage des médaillons (scratchpad v5-content/regrade-v5.mjs avec sharp) : ciel et tribunes navy, pelouse émeraude profonde, lumière chaude en haut, faisceaux des mâts, vignette navy, lignes et confettis dorés conservés, grain ordonné ±3 contre les bandes, PNG palette 1080 × 2400 ; aucun texte"
+    },
+    {
+      "asset": "sfx/*",
+      "author": "Le Bonbon",
+      "license": "CC0-1.0",
+      "note": "sons synthétisés avec scripts/make-sfx.mjs --preset football (coup de pied, sifflet d’arbitre, corne de stade + foule, rugissement) puis scripts/sfx-convert.sh, 2026-10-17"
+    },
+    {
+      "asset": "prize/banner.png, prize/card.jpg, prize/item-1.png à item-4.png (lot)",
+      "author": "Le Bonbon",
+      "license": "CC0-1.0",
+      "note": "illustrations du lot (billets de la cérémonie, train générique, hôtel, dîner, skyline) dessinées en SVG avec le kit des médaillons et rasterisées avec sharp (masters docs/propositions/dotation/, 2026-10-17), dérivées pour le thème : bannière 1080 × 420 et vignettes 256 en PNG palette, affiche 1080 × 1350 en JPEG q82 ; aucune marque, aucun logo, aucune livrée ; illustrations non contractuelles"
+    }
+  ]
+}
